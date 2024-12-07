@@ -1,9 +1,10 @@
 {
-  "username": "john",
-  "password": "john",
-  "monthlyEarning": "$3,453",
-  "annualEarning": "$34,485",
-  "profitMargin": "-16%",
-  "availableInventory": "67",
-  "searchKeyword": "2024/01/01",
-  "searchResultsCount": 0
+  "username": "sam",
+  "password": "sam",
+  "monthlyEarning": "$40,000",
+  "annualEarning": "$215,000",
+  "profitMargin": "50%",
+  "availableInventory": "18",
+  "searchKeyword": "adams",
+  "searchResultsCount": 8
+}

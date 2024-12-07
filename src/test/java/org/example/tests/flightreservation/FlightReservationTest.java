@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.pages.flightreservation.*;
 import org.example.tests.AbstractTest;
 import org.example.tests.flightreservation.model.FlightReservationTestData;
+import org.example.utils.Config;
+import org.example.utils.Constants;
 import org.example.utils.JsonUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,7 +25,7 @@ public class FlightReservationTest extends AbstractTest {
     @Test
     public void userRegistrationTest(){
         RegistrationPage registrationPage = new RegistrationPage(driver);
-        registrationPage.goTo("https://d1uh9e7cu07ukd.cloudfront.net/selenium-docker/reservation-app/index.html");
+        registrationPage.goTo(Config.get(Constants.FLIGHT_RESERVATION_URL));
         Assert.assertTrue(registrationPage.isAt());
 
         registrationPage.enterUserDetails(testData.firstName(), testData.lastName());
