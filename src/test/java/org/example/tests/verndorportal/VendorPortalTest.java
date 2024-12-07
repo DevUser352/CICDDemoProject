@@ -1,17 +1,15 @@
 package org.example.tests.verndorportal;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.example.pages.vendorportal.DashboardPage;
 import org.example.pages.vendorportal.LoginPage;
 import org.example.tests.AbstractTest;
 import org.example.tests.verndorportal.model.VendorPortalTestData;
+import org.example.utils.Config;
+import org.example.utils.Constants;
 import org.example.utils.JsonUtil;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -33,7 +31,7 @@ public class VendorPortalTest extends AbstractTest {
 
     @Test
     public void loginTest(){
-        loginPage.goTo("https://d1uh9e7cu07ukd.cloudfront.net/selenium-docker/vendor-app/index.html");
+        loginPage.goTo(Config.get(Constants.VENDOR_PORTAL_URL));
         Assert.assertTrue(loginPage.isAt());
         loginPage.login(testData.username(),testData.password());
     }
